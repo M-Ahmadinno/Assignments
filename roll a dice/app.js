@@ -7,7 +7,7 @@ if(player1Turn == true){
       document.querySelector("#player1").classList.add("active")
 }
 
-document.querySelector("#rollDice").addEventListener("click", function (){
+function rollDice (){
    if(player1Turn == true){
      var rollDice = Math.ceil(Math.random()*6)
     document.querySelector("img").src = `./assets/${rollDice}.png`
@@ -34,12 +34,13 @@ document.querySelector("#rollDice").addEventListener("click", function (){
         document.querySelector("#player1").classList.add("active")
         document.querySelector("#player2").classList.remove("active")
    
-   }}})
+   }}}
 var player1TotalScoreUI = document.querySelector("#player1TotalScoreUI")
 var player2TotalScoreUI = document.querySelector("#player2TotalScoreUI")
 var player1TotalScore = 0
 var player2TotalScore = 0
-document.querySelector("#holdDice").addEventListener("click",function(){
+
+function holdDice (){
     if(player1Turn == true){
         player1TotalScore += currentScore
         player1TotalScoreUI.textContent =player1TotalScore
@@ -49,6 +50,11 @@ document.querySelector("#holdDice").addEventListener("click",function(){
         player1CurrentScoreUI.textContent = currentScore
         document.querySelector("#player2").classList.add("active")
         document.querySelector("#player1").classList.remove("active")
+         if(Number(player1TotalScoreUI.textContent) > 50){
+            alert("Player1 is a Winner")
+            resetGame()
+         }
+
 }else{
         player2TotalScore += currentScore   
         player2TotalScoreUI.textContent =  player2TotalScore
@@ -58,9 +64,13 @@ document.querySelector("#holdDice").addEventListener("click",function(){
         player2CurrentScoreUI.textContent = currentScore
         document.querySelector("#player1").classList.add("active")
         document.querySelector("#player2").classList.remove("active")
-}})
+         if(Number(player2TotalScoreUI.textContent) > 50){
+            alert("Player2 is a Winner")
+            resetGame()
+         }
+}}
 
-document.querySelector("#resetGame").addEventListener("click",function(){
+function resetGame (){
     document.querySelector("#player1").classList.add("active")
     document.querySelector("#player2").classList.remove("active")
     player1Turn = true   
@@ -72,6 +82,6 @@ document.querySelector("#resetGame").addEventListener("click",function(){
     player2TotalScore = 0
     player1TotalScoreUI.textContent =player1TotalScore
     player2TotalScoreUI.textContent =player1TotalScore
-})
+}
 
 
