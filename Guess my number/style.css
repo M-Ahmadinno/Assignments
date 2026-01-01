@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(65, 62, 62);
+    color: whitesmoke;
+    padding: 20px;
+}
+#again{
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+}
+#firstPart h6{
+    font-size: 20px;
+}
+#firstPart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#guessMyNumber{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 100px;
+}
+#line{
+    height: 5px;
+    width: 100vw;
+    background-color: whitesmoke;
+    margin-top: 60px;
+    position:relative ;
+}
+#questionbox{
+    height: 100px;
+    width: 100px;
+    background-color: whitesmoke;
+    color: rgb(65, 62, 62);
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#flex{
+    display: flex;
+}
+#inputAndBtn , #scoreAndHighscore{
+    height: 354px;
+    width: 771px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+#inputAndBtn input{
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    font-size: 25px;
+}
+#inputAndBtn input:focus{
+    background-color: whitesmoke;
+}
+#inputAndBtn button{
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+}
