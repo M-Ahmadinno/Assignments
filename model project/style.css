@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#backimg{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(assets/pexels-atbo-66986-245208.jpg);
+    background-size: cover;
+}
+#forColor{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(81, 81, 173);
+    opacity: 0.5;
+    position: relative;
+}
+#forColor1{
+    height: 150px;
+    width: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+#forCorner{
+    width: 280px;
+    display: flex;
+    justify-content: end;
+}
+#openBtn{
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 25px;
+}
+.active{
+    display: none;
+}
