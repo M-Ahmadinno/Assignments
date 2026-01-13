@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e6e3e3;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Accordion Box */
+.accordion {
+    width: 500px;
+}
+
+/* Title */
+.accordion-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(167, 139, 103);
+    margin-bottom: 20px;
+}
+
+/* Accordion Item */
+.accordion-item {
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+/* Header Button */
+.accordion-header {
+    width: 150%;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Divider */
+.accordion-header::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #ccc;
+    margin-top: 10px;
+}
+
+/* Content */
+.accordion-content {
+    padding: 15px;
+    display: none;
+    color: #555;
+}
+
+/* Active State */
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-item.active .icon {
+    transform: rotate(180deg);
+}
