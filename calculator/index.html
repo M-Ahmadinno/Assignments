@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Calculator</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -11,9 +12,9 @@
     <input type="text" id="display" disabled>
 
     <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="deleteLast()">DEL</button>
+      <button onclick="clearDisplay()">AC</button>
       <button onclick="appendValue('%')">%</button>
+      <button onclick="deleteLast()"><i class="fa-solid fa-delete-left"></i></button>
       <button onclick="appendValue('/')">÷</button>
 
       <button onclick="appendValue('7')">7</button>
@@ -31,6 +32,7 @@
       <button onclick="appendValue('3')">3</button>
       <button onclick="appendValue('+')">+</button>
 
+      <button class="zero" onclick="appendValue('00')">00</button>
       <button class="zero" onclick="appendValue('0')">0</button>
       <button onclick="appendValue('.')">.</button>
       <button class="equal" onclick="calculate()">=</button>

@@ -20,7 +20,7 @@ body {
 
 #display {
   width: 100%;
-  height: 60px;
+  height: 200px;
   font-size: 24px;
   margin-bottom: 15px;
   text-align: right;
@@ -28,6 +28,7 @@ body {
   border: none;
   border-radius: 5px;
   color: white;
+  background-color: #222;
 }
 
 .buttons {
@@ -38,12 +39,16 @@ body {
 
 button {
   height: 50px;
-  font-size: 18px;
+  width: 50px;
+  font-size: 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   background: #444;
   color: #fff;
+}
+.fa-solid{
+  font-size:18px ;
 }
 
 button:hover {
@@ -59,5 +64,5 @@ button:hover {
 }
 
 .zero {
-  grid-column: span 2;
+  /* grid-column: ; */
 }
